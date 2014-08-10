@@ -1,0 +1,66 @@
+body 
+{
+    background-color: #d0e4fe;
+}
+
+*
+{
+    font-family: "Times New Roman";
+}
+
+h1
+{
+    color: grey;
+}
+
+h2
+{
+    color: grey
+}
+
+textarea
+{
+    width: 50%;
+    height: 500px;
+    resize: none;
+}
+
+a
+{
+    background-color: grey;
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover
+{
+    background-color: blue;
+    color: grey;
+    text-decoration: none;
+}
+
+label
+{
+    color: blue;
+}
+
+tag
+{
+    color: green;
+}
+
+button
+{
+    background-color: grey;
+    color: blue;
+}
+
+important
+{
+    color: red;
+}
+
+p
+{
+    color: blue;
+}

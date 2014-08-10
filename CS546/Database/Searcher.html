@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Searcher</title>
+    </head>
+    <body>
+        <form action="Start.php" method="post" target="_blank">
+            <H1>Please type file path to be indexed.</H1>
+            <input type="text" name="page" value="full\file\path" size="16" maxlength="100">
+        </form>
+        <BR/>
+        <form action="Searcher.php" method="post" target ="_blank">
+            <H1>Please type word to be searched for.</H1>
+            <H2>Note: unimportant words will not show up in database (example: "the").</H2>
+            <input type="text" name="word" value="word" size="16" maxlength="100"><BR/>
+            <H2>Select search type(s)</H2>
+            <input type="checkbox" name="text" value="Text">Text<BR/>
+            <input type="checkbox" name="meta" value="Meta">Meta
+        </form>
+    </body>
+</html>

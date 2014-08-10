@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>Indexer</title>
+	</head>
+	<body>
+        <?PHP
+            $nope = array(" a ", " to ", " the ", " and ", " is ", " in ", " if ", " with ", " this ", " on ", " by ", " an ", " also ", " \'", "\' ");
+            $page = "http://cs465.free.fr/files/hw3b.html";
+            echo "<H1>$page</H1><BR/>";
+            fopen($page);
+            $meta = get_meta_tags($page);
+            $string = file_get_contents($page);
+            $string = strip_tags($string);
+            $search = array("\n", "\t", "\"", "\',", "\'.", "\'?", "\'!", ",", ":", ".", "!", "?");
+            $string = str_replace($search, "");
+            $string = str_replace($nope, " ");
+            $arr = exlode(" ", $string);
+            $arr = array_count_values($arr);
+            ksort($arr);
+            echo "<H2>META:</H2><BR/>";
+            echo "<UL>";
+            foreach($meta as $e)
+                echo "<LI>$e</LI>";
+            echo "</UL>";
+            echo "<H2>WORDS:</H2><BR/>";
+            echo "<UL>";
+            foreach($arr as $k => $e)
+                echo"<LI>$k: $e</LI>";
+            echo "</UL>";
+        ?>
+	</body>
+</html>
